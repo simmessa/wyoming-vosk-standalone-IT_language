@@ -13,5 +13,6 @@ services:
       - ./dirs/sentences:/share/vosk/sentences
     ports:
       - 10300:10300
+    restart: unless-stopped
         
 
