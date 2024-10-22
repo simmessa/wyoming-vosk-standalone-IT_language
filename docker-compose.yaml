@@ -1,0 +1,17 @@
+version: "2"
+services:
+  vosk:
+    image: wyoming-vosk-standalone:1.5.0
+    environment:
+      - CORRECT_SENTENCES=0.0
+      - PRELOAD_LANGUAGE=en
+      - DEBUG_LOGGING=TRUE
+      - LIMIT_SENTENCES=TRUE
+      - ALLOW_UNKNOWN=False
+    volumes:
+      - ./dirs/data:/data
+      - ./dirs/sentences:/share/vosk/sentences
+    ports:
+      - 10300:10300
+        
+
