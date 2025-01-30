@@ -33,7 +33,6 @@ fi
 echo flags = ${flags[@]}
 python3 -m wyoming_vosk \
     --uri 'tcp://0.0.0.0:10300' \
-    --data-dir /data \
     --download-dir /data \
     --data-dir /share/vosk/models \
     --sentences-dir /share/vosk/sentences \
