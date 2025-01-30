@@ -7,6 +7,7 @@ A standalone container for vosk using the wyoming protocol. Inspired by [this ha
 
 # Usage
 * clone the repo
+* change into the repo: `cd wyoming-vosk-standalone`
 * build the container: `bash build.sh`
 * optional: adapt `docker-compose.yaml` to your use-case
 * run the container: `docker compose up`
