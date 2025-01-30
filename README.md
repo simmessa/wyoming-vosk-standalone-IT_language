@@ -17,5 +17,12 @@ A directory called `dirs` will be created in the current folder. Inside that fol
 # Using it in Home Assistant
 * Settings->Integrations->Add Integration: Add the wyoming protocol and add the IP of wherever you are running `Wyoming Vosk Standalone`. The port is `10300`.
 
+# Using a specific model
+Other Vosk-Models can be found [here](https://alphacephei.com/vosk/models). Let's say you want to use `vosk-model-de-0.21`, a german model (de)
+* `cd` into the models directory: `cd dirs/models`
+* Download the model: `wget https://alphacephei.com/vosk/models/vosk-model-de-0.21.zip`
+* Unzip: `unzip vosk-model-de-0.21.zip`
+* vosk uses the foldername to determine the language: `mv vosk-model-de-0.21 de`
+* optional: delete the zip: `rm unzip vosk-model-de-0.21.zip`
 # Note
 Pull requests and ideas/feature requests are always welcome!
