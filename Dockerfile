@@ -16,6 +16,8 @@ RUN \
         python3 \
         python3-pip \
         libatomic1 \
+        wget \
+        unzip \
     && pip3 install --no-cache-dir -U \
         setuptools \
         wheel \
@@ -24,6 +26,9 @@ RUN \
         -f . \
         "wyoming-vosk[limited] @ https://github.com/rhasspy/wyoming-vosk/archive/refs/tags/v${WYOMING_VOSK_VERSION}.tar.gz" \
     && rm -rf /var/lib/apt/lists/*
+
+# Add ITALIAN model
+RUN mkdir -p /share/vosk/models/it && wget https://alphacephei.com/vosk/models/vosk-model-small-it-0.22.zip && unzip vosk-model-small-it-0.22.zip && mv vosk-model-small-it-0.22/* /share/vosk/models/it
 
 WORKDIR /
 COPY start.sh /start.sh

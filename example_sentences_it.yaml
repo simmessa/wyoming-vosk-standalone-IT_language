@@ -1,0 +1,13 @@
+sentences:
+  - accendi <art> {device}
+  - spegni <art> {device}
+lists:
+  device:
+    values:
+      - faretti nord
+      - faretti sud
+      - faretti ovest
+      - luce davanti
+      - luce dietro
+expansion_rules:
+  art: "[il|la|i]"
